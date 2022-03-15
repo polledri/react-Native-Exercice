@@ -41,9 +41,10 @@ export default function Square() {
                         title="Valider"
                         color='black'
                         onPress={() => {
+                            if (com !== '') {
                             addElement()
                             onChangeCom('')
-                        }}/>
+                        }}}/>
                 </View>
                 <View style={styles.squareCommentary}>
                     <FlatList
@@ -92,13 +93,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
     },
     squareCommentary: {
-        maxHeight: 80,
+        maxHeight: '20%',
         marginTop: '5%',
         backgroundColor: 'white',
-        justifyContent: "center"
     },
     squareTextCom: {
-        height: 40,
+        height: 35,
         fontSize: 15,
         padding: 10,
         color: 'black',
