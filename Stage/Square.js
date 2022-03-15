@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, Image, TextInput, Text, View, ScrollView, Button, FlatList } from 'react-native';
+import { StyleSheet, TextInput, Text, View, Button, FlatList } from 'react-native';
+import Star from "./Star";
 
 export default function Square() {
     const [com, onChangeCom] = useState('');
@@ -19,13 +20,7 @@ export default function Square() {
                 <Text style={styles.squareText}>
                     Noter ce trail
                 </Text>
-                <View style={{flexDirection: "row"}}>
-                    <Image style={styles.squareImg} source={require('./assets/star_fulla.png')} />
-                    <Image style={styles.squareImg} source={require('./assets/star_empty.png')} />
-                    <Image style={styles.squareImg} source={require('./assets/star_empty.png')} />
-                    <Image style={styles.squareImg} source={require('./assets/star_empty.png')} />
-                    <Image style={styles.squareImg} source={require('./assets/star_empty.png')} />
-                </View>
+                <Star/>
                 <Text style={styles.squareText}>
                     Commenter
                 </Text>
@@ -72,12 +67,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: 'white',
     },
-    squareImg: {
-        marginTop: '5%',
-        marginLeft: '3%',
-        width: 40,
-        height: 40,
-    },
     squareInput: {
         height: 60,
         width: '100%',
@@ -103,4 +92,4 @@ const styles = StyleSheet.create({
         padding: 10,
         color: 'black',
     },
-  });
+});
